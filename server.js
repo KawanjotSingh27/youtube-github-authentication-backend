@@ -21,7 +21,7 @@ app.get('/callback/youtube',(req,res)=>{
     const data = {
         client_id: client_id_youtube,
         client_secret: client_secret_youtube,
-        redirect_uri: 'http://localhost:5000/callback/youtube',
+        redirect_uri: 'https://youtube-github-authentication-backend.onrender.com/callback/youtube',
         grant_type: 'authorization_code',
         code: code,
     };
@@ -42,7 +42,7 @@ app.get('/callback/youtube',(req,res)=>{
 
         const oauthToken = tokenData.access_token;
 
-        res.redirect(`http://localhost:5173/callback/callback_youtube?oauthToken=${oauthToken}`);
+        res.redirect(`https://youtubegithubauthentication.netlify.app/callback/callback_youtube?oauthToken=${oauthToken}`);
         })
     .catch((error) => {
         console.error('Error exchanging code for token:', error);
