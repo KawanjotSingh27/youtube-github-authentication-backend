@@ -63,7 +63,7 @@ app.get("/callback/github",(req,res)=>{
         client_id:client_id_github,
         client_secret:client_secret_github,
         code:code,
-        redirect_uri:`http://youtube-github-backend:${PORT}/callback/github`
+        redirect_uri:`https://youtube-github-authentication-backend.onrender.com/callback/github`
     }
 
     fetch(tokenUrl,{
