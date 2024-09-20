@@ -101,5 +101,5 @@ app.get("/callback/github",(req,res)=>{
 })
 
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}/callback`);
+    console.log(`Server running on http://youtube-github-backend:${PORT}/callback`);
 });
