@@ -63,7 +63,7 @@ app.get("/callback/github",(req,res)=>{
         client_id:client_id_github,
         client_secret:client_secret_github,
         code:code,
-        redirect_uri:"http://localhost:5000/callback/github"
+        redirect_uri:`http://youtube-github-backend:${PORT}/callback/github`
     }
 
     fetch(tokenUrl,{
@@ -92,7 +92,7 @@ app.get("/callback/github",(req,res)=>{
         }
         const oauthToken = tokenData.access_token;
 
-        res.redirect(`http://localhost:5173/callback/callback_github?oauthToken=${oauthToken}`);
+        res.redirect(`https://youtubegithubauthentication.netlify.app/callback/callback_github?oauthToken=${oauthToken}`);
     })
     .catch((error) => {
         console.error('Error exchanging code for token:', error);
